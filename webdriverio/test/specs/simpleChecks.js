@@ -1,7 +1,7 @@
-const BasePage = require('../../page_objects/basePage/basePage.js');
-const HomePage = require('../../page_objects/homePage/homePage.js');
-const MoviePage = require('../../page_objects/moviePage/moviePage.js');
-const Executor = require('../../helpers/executor');
+const BasePage = require('../../utils/page_objects/basePage/basePage.js');
+const HomePage = require('../../utils/page_objects/homePage/homePage.js');
+const MoviePage = require('../../utils/page_objects/moviePage/moviePage.js');
+const Executor = require('../../utils/helpers/executor');
 
 
 describe('Positive scenarios', () => {

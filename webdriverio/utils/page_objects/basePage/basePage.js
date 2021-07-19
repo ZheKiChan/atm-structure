@@ -1,3 +1,5 @@
+const logger = require('../../../config/logger.config');
+
 class BasePage {
     constructor() {
         this.searchInput = 'input[name="kp_query"]';
@@ -5,6 +7,7 @@ class BasePage {
 
     async getCurrentUrl() {
         const currentUrl = await browser.getUrl();
+        logger.info(`Current url is ${currentUrl}`);
         return currentUrl;
     }
 
@@ -14,16 +17,19 @@ class BasePage {
 
     async getTitle() {
         const title = await browser.getTitle();
+        logger.debug(`The title is ${title}`);
         return title;
     }
 
     async getElement(selector) {
         let selectedElement = await $(selector);
+        logger.debug(`The selected element is "${selectedElement}"`)
         return selectedElement;
     }
 
     async inputValue(elem, text) {
         await elem.setValue(text);
+        logger.info(`The value "${text}" has been entered`);
     }
 
     async waitForElemToBeDisplayed(elementToBeDisplayed, milisec) {
@@ -36,6 +42,7 @@ class BasePage {
 
     async clickOn(elementToClickOn) {
         await elementToClickOn.click();
+        logger.info(`${elementToClickOn} has been clicked`);
     }
 
     async waitUntilLoaded() {

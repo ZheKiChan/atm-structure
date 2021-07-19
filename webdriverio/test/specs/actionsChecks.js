@@ -1,7 +1,7 @@
-const Actions = require('../../helpers/actions');
-const BasePage = require('../../page_objects/basePage/basePage');
-const HomePage = require('../../page_objects/homePage/homePage.js');
-const Executor = require('../../helpers/executor');
+const Actions = require('../../utils/helpers/actions');
+const BasePage = require('../../utils/page_objects/basePage/basePage');
+const HomePage = require('../../utils/page_objects/homePage/homePage.js');
+const Executor = require('../../utils/helpers/executor');
 
 describe('Basic checks for newly added actions', () => {
     let homePage, basePage, actions, executor
